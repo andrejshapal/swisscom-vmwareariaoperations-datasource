@@ -48,7 +48,7 @@ export class AriaOpsCompletionItemProvider
     datasource: DataSource;
     monaco: Monaco;
     adapterResourceKinds?: Record<string, string[]>;
-    cache: Map<string, [string[], string[], string[]]> = new Map<string, [string[], string[], string[]]>
+    cache: Map<string, [string[], string[], string[]]> = new Map<string, [string[], string[], string[]]>()
     triggerCharacters?: string[];
 
     constructor(datasource: DataSource, monaco: Monaco) {
@@ -94,7 +94,7 @@ export class AriaOpsCompletionItemProvider
             };
         }
 
-        let resourceKinds : string[] = []
+        let resourceKinds: string[] = []
         if (this.adapterResourceKinds) {Object.values(this.adapterResourceKinds).map(resources =>
         resourceKinds = resourceKinds.concat(resources))}
         return {

@@ -6,7 +6,7 @@ export default (datasource: DataSource): Record<string, string[]> => {
 
     useEffect(() => {
         let ignore = false;
-        if (!datasource) return;
+        if (!datasource) {return;}
 
         datasource
             .fetchAdapterResourceKinds()

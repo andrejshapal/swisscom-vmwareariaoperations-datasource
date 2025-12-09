@@ -6,28 +6,28 @@ export default (datasource: DataSource, builderOptions: QueryBuilderOptions): re
     const [metrics, setMetrics] = useState<string[]>([]);
     const [properties, setProperties] = useState<string[]>([]);
     const [tags, setTags] = useState<string[]>([]);
-    const [cache, setCache] = useState<Map<string, [string[], string[], string[]]>>(new Map<string, [string[], string[], string[]]>);
+    const [cache, setCache] = useState<Map<string, [string[], string[], string[]]>>(new Map<string, [string[], string[], string[]]>());
 
     useEffect(() => {
 
         let ignore = false;
-        if (!datasource) return;
+        if (!datasource) {return;}
         const keyString = `${builderOptions.functions.adapterKind}:${builderOptions.functions.resourceKind}`;
         const fromCache = cache.get(keyString)
         if(fromCache) {
             const [metrics, properties, tags] = fromCache
-            if(metrics) setMetrics(metrics);
-            if(properties) setProperties(properties);
-            if(tags) setTags(tags);
+            if(metrics) {setMetrics(metrics);}
+            if(properties) {setProperties(properties);}
+            if(tags) {setTags(tags);}
         }
         else {
             datasource
                 .fetchMetricsProperties(builderOptions)
                 .then(response => {
                     if (!ignore) {
-                        if (response && response.metrics) setMetrics(response.metrics);
-                        if (response && response.properties) setProperties(response.properties);
-                        if (response && response.tags) setTags(response.tags);
+                        if (response && response.metrics) {setMetrics(response.metrics);}
+                        if (response && response.properties) {setProperties(response.properties);}
+                        if (response && response.tags) {setTags(response.tags);}
                         setCache(cache.set(keyString, [response.metrics || [], response.properties || [], response.tags || []]))
                     }
                 })

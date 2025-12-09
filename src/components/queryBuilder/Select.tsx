@@ -48,7 +48,7 @@ export const MultiSelect = (props: MultiSelectProps) => {
             <MultiCombobox
                 options={options}
                 value={values}
-                onChange={ (e : ComboboxOption<string>[]) => {
+                onChange={ (e: Array<ComboboxOption<string>>) => {
                     return changeFunction(
                         e.map(v => v.value)
                     )
@@ -90,7 +90,7 @@ export const MultiSelectMetricPropertyTag = (props: MultiSelectMetricPropertyTag
             <MultiCombobox
                 options={options}
                 value={values}
-                onChange={ (e : ComboboxOption<string>[]) => {
+                onChange={ (e: Array<ComboboxOption<string>>) => {
                     return changeFunction(
                         e.map(v => v.value)
                     )
@@ -115,7 +115,7 @@ export type SingleSelectAdapterResourceKind = {
 export const SingleSelectAdapterResourceKind = (props: SingleSelectAdapterResourceKind) => {
     const { changeFunction, labels, value, fetchedOptions} = props;
     const { label, tooltip } = labels;
-    const options: ComboboxOption<string>[] | ((inputValue: string) => Promise<ComboboxOption<string>[]>) | { label: any; value: any; }[]  = []
+    const options: Array<ComboboxOption<string>> | ((inputValue: string) => Promise<Array<ComboboxOption<string>>>) | Array<{ label: any; value: any; }>  = []
     if(fetchedOptions) {
         fetchedOptions.map((t: any) => (options.push({label: t, value: t})))
     }

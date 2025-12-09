@@ -12,8 +12,8 @@ type CustomFilterProps = {
 export const CustomFilterBlock = (props: CustomFilterProps) => {
     const { changeFunction, filter, filterKey, builderOptions} = props;
     const {type, operand, value} = filter;
-    const types: ComboboxOption[] | ((inputValue: string) => Promise<ComboboxOption[]>) | { label: any; value: any; }[]  = (Object.values(CustomFilterType) as Array< CustomFilterType >).map(v => {return {key: v, value: v}})
-    const operands: ComboboxOption[] | ((inputValue: string) => Promise<ComboboxOption[]>) | { label: any; value: any; }[]  = (Object.values(Operand) as Array< Operand >).map(v => {return {key: v, value: v}})
+    const types: ComboboxOption[] | ((inputValue: string) => Promise<ComboboxOption[]>) | Array<{ label: any; value: any; }>  = (Object.values(CustomFilterType) as CustomFilterType[]).map(v => {return {key: v, value: v}})
+    const operands: ComboboxOption[] | ((inputValue: string) => Promise<ComboboxOption[]>) | Array<{ label: any; value: any; }>  = (Object.values(Operand) as Operand[]).map(v => {return {key: v, value: v}})
     return (
             <Stack direction='row' wrap='nowrap' alignItems='center' justifyContent='start' gap={1}>
                 <Combobox

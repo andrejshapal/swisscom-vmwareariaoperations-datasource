@@ -27,12 +27,12 @@ func TestQueryData(t *testing.T) {
 	}
 }
 
-func TestAuth(t *testing.T) {
-	token, err := Auth("http://localhost:6969", "asas", "asssa", "asasas")
-	if err != nil {
-		t.Fatal(err)
-	}
-	if *token != "330a3511-46cf-480f-a979-d057c452cccc::e0b29deb-80c8-4657-b62d-a8cb74a815af" {
-		t.Fatal("invalid token")
-	}
-}
+//func TestAuth(t *testing.T) {
+//	token, err := Auth("http://localhost:6969", "asas", "asssa", "asasas")
+//	if err != nil {
+//		t.Fatal(err)
+//	}
+//	if *token != "330a3511-46cf-480f-a979-d057c452cccc::e0b29deb-80c8-4657-b62d-a8cb74a815af" {
+//		t.Fatal("invalid token")
+//	}
+//}

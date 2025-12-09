@@ -11,7 +11,7 @@ export type SingleChangeFunction = (
 ) => void;
 
 export type MultiChangeFunction = (
-    value:string[],
+    value: string[],
 ) => void;
 
 export function createEmptyStringInstance<T>(): T {
