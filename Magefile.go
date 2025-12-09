@@ -1,7 +1,7 @@
 //go:build mage
 // +build mage
 
-package swisscom_vmwareariaoperations_datasource
+package main
 
 import (
 	"os"

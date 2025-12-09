@@ -1,3 +1,5 @@
+DEVELOPMENT=true docker-compose up
+
 # Grafana data source plugin template
 
 This template is a starting point for building a Data Source Plugin for Grafana.
