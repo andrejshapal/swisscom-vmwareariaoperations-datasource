@@ -1,0 +1,99 @@
+{
+  "values": [
+    {
+      "resourceId": "57a2200a-10c8-4ffd-b8d3-09dbc5105893",
+      "property-contents": {
+        "property-content": [
+          {
+            "statKey": "summary|tagJson",
+            "timestamps": [
+              1764688530528
+            ],
+            "values": [
+              "none"
+            ]
+          },
+          {
+            "statKey": "summary|parentVcenter",
+            "timestamps": [
+              1764688530528
+            ],
+            "values": [
+              "lsrvat01vce0101.sccloudinfra.net"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resourceId": "c8a7b1dd-05bf-48e8-9863-d51550ed2eef",
+      "property-contents": {
+        "property-content": [
+          {
+            "statKey": "summary|tagJson",
+            "timestamps": [
+              1764688530528
+            ],
+            "values": [
+              "none"
+            ]
+          },
+          {
+            "statKey": "summary|parentHost",
+            "timestamps": [
+              1764688530528
+            ],
+            "values": [
+              "lesx01olt0011.sccloudinfra.net"
+            ]
+          },
+          {
+            "statKey": "summary|parentVcenter",
+            "timestamps": [
+              1764688530528
+            ],
+            "values": [
+              "lsrvat01vce0101.sccloudinfra.net"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resourceId": "0373ec74-80e5-4485-8a35-1c94e5c3b3af",
+      "property-contents": {
+        "property-content": [
+          {
+            "statKey": "summary|tagJson",
+            "timestamps": [
+              1761061781000,
+              1764688530428
+            ],
+            "values": [
+              "[{\"category\":\"AlarmingLevel\",\"name\":\"besteffort\"},{\"category\":\"Responsibility\",\"name\":\"Squad-INFRA\"}]",
+              "[{\"category\":\"AlarmingLevel\",\"name\":\"besteffort\"},{\"category\":\"Responsibility\",\"name\":\"Squad-PITSTOP\"}]"
+            ]
+          },
+          {
+            "statKey": "summary|parentHost",
+            "timestamps": [
+              1764688530528
+            ],
+            "values": [
+              "lesx01olt0011.sccloudinfra.net"
+            ]
+          },
+          {
+            "statKey": "summary|parentVcenter",
+            "timestamps": [
+              1764688530528
+            ],
+            "values": [
+              "lsrvat01vce0101.sccloudinfra.net"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

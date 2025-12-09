@@ -1,0 +1,334 @@
+openapi: 3.0.0
+info:
+  description: >-
+    <b>Internal API(s)</b> may not be supported in future releases. Use it at
+    your own risk.
+
+    <p><span style="color: #9F6000; background-color: #FEEFB3; padding:7px;">&#9888; <b>Notice</b>: XML media type is deprecated. All new APIs or changes won't support XML. Please switch to JSON for data interchange.</span></p>
+  title: VMware Aria Operations API
+  version: ""
+tags:
+  - name: Internal Resources
+    description: <i>/internal/resources</i> APIs for performing internal operations
+      on numerous resources
+paths:
+  /internal/resources/properties/query:
+    post:
+      tags:
+        - Internal Resources
+      summary: Get the value changes of requested properties for the specified
+        resources in a given time interval
+      description: "Note: The request in addition to property value changes will
+        return the value of the property at the beginning of the range."
+      operationId: queryPropertyChangesOfResourcesUsingPOST
+      parameters:
+        - name: X-Ops-API-use-unsupported
+          in: header
+          description: >-
+            Custom HTTP header name to be used by Suite API clients to
+            acknowledge the fact
+
+            that the client intends to use a Suite API under the "/internal" endpoint even
+
+            though these backwards compatibility for these APIs is not guaranteed.
+          required: true
+          schema:
+            type: boolean
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/internal-property-change-query"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/internal-property-change-query"
+        description: The query spec
+        required: true
+        x-examples:
+          application/xml: >
+            <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+            <ops:property-change-query xmlns:ops="http://webservice.vmware.com/vRealizeOpsMgr/1.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <ops:resourceId>d03ea9cf-9bd8-4675-aedb-aaf3381a0fd2 9192a580-5657-4e2f-9dd8-ad27d44c9fd9</ops:resourceId>
+                <ops:propertyKey>prop|key1 prop|key2</ops:propertyKey>
+                <ops:begin>1534708800000</ops:begin>
+                <ops:end>1535140800000</ops:end>
+            </ops:property-change-query>
+          application/json: >-
+            {
+              "resourceId" : [ "5b659ea6-4ab7-4949-a369-99056e013f0c", "a8f40a08-b2bb-4baf-a40e-646618065c41" ],
+              "propertyKey" : [ "prop|key1", "prop|key2" ],
+              "begin" : 1534708800000,
+              "end" : 1535140800000
+            }
+      responses:
+        "200":
+          description: A mapping from requested resource to specified properties' value
+            changes
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/internal-resources-property-contents"
+              examples:
+                response:
+                  value: |-
+                    {
+                      "values" : [ {
+                        "resourceId" : "06c00e61-13cc-49ed-9139-06adfc01e5d0",
+                        "property-contents" : {
+                          "property-content" : [ {
+                            "statKey" : "system|availability",
+                            "timestamps" : [ 1119844280663 ],
+                            "values" : [ "UP" ]
+                          }, {
+                            "statKey" : "config|num|processes",
+                            "timestamps" : [ 1119844280663 ],
+                            "data" : [ 93.0 ]
+                          } ]
+                        }
+                      }, {
+                        "resourceId" : "92e555ac-943d-46ff-b9e6-17b215f004b7",
+                        "property-contents" : {
+                          "property-content" : [ {
+                            "statKey" : "system|availability",
+                            "timestamps" : [ 1119844280663 ],
+                            "values" : [ "UP" ]
+                          }, {
+                            "statKey" : "config|num|processes",
+                            "timestamps" : [ 1119844280663 ],
+                            "data" : [ 93.0 ]
+                          } ]
+                        }
+                      } ]
+                    }
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/internal-resources-property-contents"
+              examples:
+                response:
+                  value: >
+                    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+                    <ops:resources-property-contents xmlns:ops="http://webservice.vmware.com/vRealizeOpsMgr/1.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <ops:resource-property-contents>
+                            <ops:resourceId>a911fdca-6b48-4e6a-b97c-ba38367faa54</ops:resourceId>
+                            <ops:property-contents>
+                                <ops:property-content statKey="system|availability">
+                                    <ops:timestamps>1119844280663</ops:timestamps>
+                                    <ops:values>UP</ops:values>
+                                </ops:property-content>
+                                <ops:property-content statKey="config|num|processes">
+                                    <ops:timestamps>1119844280663</ops:timestamps>
+                                    <ops:data>93.0</ops:data>
+                                </ops:property-content>
+                            </ops:property-contents>
+                        </ops:resource-property-contents>
+                        <ops:resource-property-contents>
+                            <ops:resourceId>82d1d450-c2d9-41cd-acbc-8bfbb3367a67</ops:resourceId>
+                            <ops:property-contents>
+                                <ops:property-content statKey="system|availability">
+                                    <ops:timestamps>1119844280663</ops:timestamps>
+                                    <ops:values>UP</ops:values>
+                                </ops:property-content>
+                                <ops:property-content statKey="config|num|processes">
+                                    <ops:timestamps>1119844280663</ops:timestamps>
+                                    <ops:data>93.0</ops:data>
+                                </ops:property-content>
+                            </ops:property-contents>
+                        </ops:resource-property-contents>
+                    </ops:resources-property-contents>
+      security:
+        - OpsToken: []
+      deprecated: false
+externalDocs:
+  description: The old, deprecated Documentation can be found here.
+  url: /docs/rest/internal_index.html
+servers:
+  - url: https://lsrv00vrops01.sccloudinfra.net/suite-api
+components:
+  securitySchemes:
+    OpsToken:
+      type: apiKey
+      name: Authorization
+      in: header
+      x-deployedOnCloudProxy: "false"
+      x-supportedTokens:
+        - vRealizeOpsToken
+        - OpsToken
+        - VCToken
+        - SSO2Token
+        - CSPToken
+        - VIDBToken
+  schemas:
+    internal-resources-property-contents:
+      type: object
+      properties:
+        values:
+          type: array
+          description: Collection of resource property contents
+          items:
+            $ref: "#/components/schemas/internal-resource-property-contents"
+      title: resources-property-contents
+      xml:
+        name: resources-property-contents
+        attribute: false
+        wrapped: false
+    internal-resource-property-contents:
+      type: object
+      required:
+        - property-contents
+        - resourceId
+      properties:
+        property-contents:
+          $ref: "#/components/schemas/internal-property-contents"
+        resourceId:
+          type: string
+          format: uuid
+          xml:
+            name: resourceId
+            attribute: false
+            wrapped: false
+          description: The resource Id
+      title: resource-property-contents
+      xml:
+        name: resource-property-contents
+        namespace: http://webservice.vmware.com/vRealizeOpsMgr/1.0/
+        attribute: false
+        wrapped: false
+      description: Represents the Property Contents for a given resource
+    internal-property-contents:
+      type: object
+      required:
+        - property-content
+      properties:
+        property-content:
+          type: array
+          xml:
+            name: property-content
+            attribute: false
+            wrapped: false
+          description: Collection of property contents
+          items:
+            $ref: "#/components/schemas/internal-property-content"
+      title: property-contents
+      xml:
+        name: property-contents
+        namespace: http://webservice.vmware.com/vRealizeOpsMgr/1.0/
+        attribute: false
+        wrapped: false
+      description: Represents the Property Contents posted by the user
+    internal-property-content:
+      type: object
+      required:
+        - statKey
+        - timestamps
+      properties:
+        data:
+          type: array
+          xml:
+            name: data
+            attribute: false
+            wrapped: false
+          description: The array of numeric data that is being posted
+          items:
+            type: number
+            format: double
+        statKey:
+          type: string
+          xml:
+            name: statKey
+            attribute: true
+            wrapped: false
+          description: Stat Key for which the data is being posted
+        timestamps:
+          type: array
+          xml:
+            name: timestamps
+            attribute: false
+            wrapped: false
+          description: The array of timestamps at which the data is being posted. All the
+            timestamps must be in milliseconds.
+          items:
+            type: integer
+            format: int64
+        values:
+          type: array
+          xml:
+            name: values
+            attribute: false
+            wrapped: false
+          description: The array of string values that are being posted
+          items:
+            type: string
+      title: property-content
+      xml:
+        name: property-content
+        namespace: http://webservice.vmware.com/vRealizeOpsMgr/1.0/
+        attribute: false
+        wrapped: false
+      description: |-
+        Represents the Property Content posted by the user.
+        The data posted by the user can be numeric data or string data.
+        However both types of the data cannot be sent together.
+    internal-property-change-query:
+      type: object
+      required:
+        - propertyKey
+        - resourceId
+      properties:
+        begin:
+          type: integer
+          format: int64
+          xml:
+            name: begin
+            attribute: false
+            wrapped: false
+          description: >-
+            The beginning date as a long value of the range of properties'
+            changes to return
+
+            Value measures the number of milliseconds since January 1, 1970 00:00:00 UTC
+
+            NOTE: If not provided, 24 hour rearward of ending date is used
+        end:
+          type: integer
+          format: int64
+          xml:
+            name: end
+            attribute: false
+            wrapped: false
+          description: >-
+            The ending date as a long value of the range of properties' changes
+            to return
+
+            Value measures the number of milliseconds since January 1, 1970 00:00:00 UTC
+
+            NOTE: The ending date must not be less than the beginning date.
+
+            If not provided, current time as UTC milliseconds is used
+        propertyKey:
+          type: array
+          xml:
+            name: propertyKey
+            attribute: false
+            wrapped: false
+          description: Array of property keys to fetch the values for
+          items:
+            type: string
+        resourceId:
+          type: array
+          xml:
+            name: resourceId
+            attribute: false
+            wrapped: false
+          description: Array of resource ids to fetch the properties for
+          items:
+            type: string
+            format: uuid
+      title: property-change-query
+      xml:
+        name: property-change-query
+        namespace: http://webservice.vmware.com/vRealizeOpsMgr/1.0/
+        attribute: false
+        wrapped: false
+      description: Object used to request properties on a collection of resources

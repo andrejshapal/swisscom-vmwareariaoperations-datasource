@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "datasource",
+  "name": "Vmware-Aria-Operations",
+  "id": "swisscom-vmwareariaoperations-datasource",
+  "metrics": true,
+  "backend": true,
+  "alerting": true,
+  "executable": "gpx_vmware_aria_operations",
+  "info": {
+    "description": "",
+    "author": {
+      "name": "Swisscom"
+    },
+    "keywords": ["datasource"],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=10.4.0",
+    "plugins": []
+  }
+}

@@ -1,0 +1,172 @@
+resources-property-contents:
+  type: object
+  properties:
+    values:
+      type: array
+      description: Collection of resource property contents
+      items:
+        $ref: "#/components/schemas/resource-property-contents"
+  title: resources-property-contents
+  xml:
+    name: resources-property-contents
+    attribute: false
+    wrapped: false
+resource-property-contents:
+  type: object
+  required:
+    - properties
+    - resourceId
+  properties:
+    properties:
+      $ref: "#/components/schemas/property-contents"
+    resourceId:
+      type: string
+      format: uuid
+      xml:
+        name: resourceId
+        attribute: false
+        wrapped: false
+      description: The resource Id
+  title: resource-property-contents
+  xml:
+    name: resource-property-contents
+    namespace: http://webservice.vmware.com/vRealizeOpsMgr/1.0/
+    attribute: false
+    wrapped: false
+  description: Represents the Property Contents for a given resource
+property-contents:
+  type: object
+  required:
+    - property-content
+  properties:
+    property-content:
+      type: array
+      xml:
+        name: property-content
+        attribute: false
+        wrapped: false
+      description: Collection of property contents
+      items:
+        $ref: "#/components/schemas/property-content"
+  title: property-contents
+  xml:
+    name: property-contents
+    namespace: http://webservice.vmware.com/vRealizeOpsMgr/1.0/
+    attribute: false
+    wrapped: false
+  description: Represents the Property Contents posted by the user
+property-content:
+  type: object
+  required:
+    - statKey
+    - timestamps
+  properties:
+    data:
+      type: array
+      xml:
+        name: data
+        attribute: false
+        wrapped: false
+      description: The array of numeric data that is being posted
+      items:
+        type: number
+        format: double
+    statKey:
+      type: string
+      xml:
+        name: statKey
+        attribute: true
+        wrapped: false
+      description: Stat Key for which the data is being posted
+    timestamps:
+      type: array
+      xml:
+        name: timestamps
+        attribute: false
+        wrapped: false
+      description: The array of timestamps at which the data is being posted. All the
+        timestamps must be in milliseconds.
+      items:
+        type: integer
+        format: int64
+    values:
+      type: array
+      xml:
+        name: values
+        attribute: false
+        wrapped: false
+      description: The array of string values that are being posted
+      items:
+        type: string
+  title: property-content
+  xml:
+    name: property-content
+    namespace: http://webservice.vmware.com/vRealizeOpsMgr/1.0/
+    attribute: false
+    wrapped: false
+  description: |-
+    Represents the Property Content posted by the user.
+    The data posted by the user can be numeric data or string data.
+    However both types of the data cannot be sent together.
+    property-change-query:
+      type: object
+      required:
+        - propertyKey
+        - resourceId
+      properties:
+        begin:
+          type: integer
+          format: int64
+          xml:
+            name: begin
+            attribute: false
+            wrapped: false
+          description: >-
+            The beginning date as a long value of the range of properties'
+            changes to return
+
+            Value measures the number of milliseconds since January 1, 1970 00:00:00 UTC
+
+            NOTE: If not provided, 24 hour rearward of ending date is used
+        end:
+          type: integer
+          format: int64
+          xml:
+            name: end
+            attribute: false
+            wrapped: false
+          description: >-
+            The ending date as a long value of the range of properties' changes
+            to return
+
+            Value measures the number of milliseconds since January 1, 1970 00:00:00 UTC
+
+            NOTE: The ending date must not be less than the beginning date.
+
+            If not provided, current time as UTC milliseconds is used
+        propertyKey:
+          type: array
+          xml:
+            name: propertyKey
+            attribute: false
+            wrapped: false
+          description: Array of property keys to fetch the values for
+          items:
+            type: string
+        resourceId:
+          type: array
+          xml:
+            name: resourceId
+            attribute: false
+            wrapped: false
+          description: Array of resource ids to fetch the properties for
+          items:
+            type: string
+            format: uuid
+      title: property-change-query
+      xml:
+        name: property-change-query
+        namespace: http://webservice.vmware.com/vRealizeOpsMgr/1.0/
+        attribute: false
+        wrapped: false
+      description: Object used to request properties on a collection of resources

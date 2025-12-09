@@ -1,0 +1,625 @@
+{
+  "adapter-kind": [
+    {
+      "key": "VCF_UNIFIED_CONFIG",
+      "name": "Configuration Management",
+      "description": "Configuration Management",
+      "adapterKindType": "GENERAL",
+      "describeVersion": 1,
+      "identifiers": [],
+      "resourceKinds": [
+        "VCF_UNIFIED_CONFIG_INSTANCE"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/VCF_UNIFIED_CONFIG",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/VCF_UNIFIED_CONFIG/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    },
+    {
+      "key": "Container",
+      "name": "Container",
+      "adapterKindType": "GENERAL",
+      "describeVersion": 67,
+      "identifiers": [],
+      "resourceKinds": [
+        "OpsGenie",
+        "BusinessService",
+        "ContainerAdapterInstance",
+        "Department",
+        "Enterprise",
+        "Environment",
+        "Function",
+        "GeoTag",
+        "Licensing",
+        "Location",
+        "Manual Application",
+        "Organization",
+        "OpsOutboundPlugin",
+        "PhysicalDatacenter",
+        "OpsPolicy",
+        "Team CLC-VIRT",
+        "Security Zone",
+        "Service Level Objective",
+        "Team DCS-INFRA",
+        "Team Red",
+        "Team-S3",
+        "Tier",
+        "Universe",
+        "VMware Cloud",
+        "vC-Ops-Self-Monitoring"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/Container",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/Container/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    },
+    {
+      "key": "NSXTAdapter",
+      "name": "NSX",
+      "description": "Provides the connection information and credentials required to monitor your NSX instances",
+      "adapterKindType": "GENERAL",
+      "describeVersion": 32,
+      "identifiers": [],
+      "resourceKinds": [
+        "ControllerCluster",
+        "ControllerNode",
+        "EdgeCluster",
+        "EdgeClusterGroup",
+        "EdgeNode",
+        "EdgeNodeGroup",
+        "FirewallSection",
+        "FirewallSectionGroup",
+        "Group",
+        "Groups",
+        "LoadBalancerPool",
+        "LoadBalancerService",
+        "LoadBalancerVirtualServer",
+        "LoadBalancerVirtualServerGroup",
+        "LogicalRouter",
+        "LogicalRouterGroup",
+        "LogicalSwitch",
+        "LogicalSwitchGroup",
+        "ManagementAppliances",
+        "ManagementCluster",
+        "ManagementNode",
+        "NSService",
+        "NSServiceGroup",
+        "NSServiceGroups",
+        "NSXTAdapterInstance",
+        "ManagementService",
+        "ManagementServiceGroup",
+        "NSXT World",
+        "RouterService",
+        "Tier0LogicalRouterGroup",
+        "Tier1LogicalRouterGroup",
+        "TransportNode",
+        "TransportZone",
+        "TransportZoneGroup"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/NSXTAdapter",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/NSXTAdapter/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    },
+    {
+      "key": "APPLICATIONDISCOVERY",
+      "name": "Service Discovery Adapter",
+      "adapterKindType": "GENERAL",
+      "describeVersion": 53,
+      "identifiers": [],
+      "resourceKinds": [
+        "ApplicationDiscoveryAdapterInstance",
+        "ServiceType",
+        "Services",
+        "vROps_Application",
+        "vRLI_Application"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/APPLICATIONDISCOVERY",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/APPLICATIONDISCOVERY/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    },
+    {
+      "key": "VMWARE",
+      "name": "vCenter",
+      "description": "Provides the connection information and credentials required to monitor your vCenter Server instances",
+      "adapterKindType": "GENERAL",
+      "describeVersion": 956,
+      "identifiers": [],
+      "resourceKinds": [
+        "ClusterComputeResource",
+        "CustomDatacenter",
+        "Datacenter",
+        "Datastore",
+        "StoragePod",
+        "DatastoreFolder",
+        "VM Entity Status",
+        "Folder",
+        "HostFolder",
+        "HostSystem",
+        "Namespace",
+        "NetworkFolder",
+        "PhysicalDatacenter",
+        "Pod",
+        "ResourcePool",
+        "SupervisorCluster",
+        "GuestCluster",
+        "VMwareAdapter Instance",
+        "VirtualMachine",
+        "VMFolder",
+        "DistributedVirtualPortgroup",
+        "VmwareDistributedVirtualSwitch",
+        "vSphere Private World",
+        "vSphere World"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/VMWARE",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/VMWARE/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    },
+    {
+      "key": "DiagnosticsAdapter",
+      "name": "VCF Diagnostics Adapter",
+      "adapterKindType": "GENERAL",
+      "describeVersion": 7,
+      "identifiers": [],
+      "resourceKinds": [
+        "DiagnosticsAdapterInstance"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/DiagnosticsAdapter",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/DiagnosticsAdapter/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    },
+    {
+      "key": "CASAdapter",
+      "name": "VMware Aria Automation",
+      "adapterKindType": "GENERAL",
+      "describeVersion": 15,
+      "identifiers": [],
+      "resourceKinds": [
+        "CAS_CLUSTER_WORLD",
+        "CASENTITYSTATUS",
+        "CAS World",
+        "Blueprint",
+        "CloudAccount",
+        "CloudZone",
+        "Deployment",
+        "Organization",
+        "Project",
+        "PublicCloudZone",
+        "USER",
+        "CAS Adapter Instance"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/CASAdapter",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/CASAdapter/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    },
+    {
+      "key": "APPOSUCP",
+      "name": "VMware Aria Operations Application Management Pack",
+      "adapterKindType": "GENERAL",
+      "describeVersion": 94,
+      "identifiers": [],
+      "resourceKinds": [
+        "activedirectory",
+        "activedirectory_Application",
+        "activedirectory_database",
+        "activedirectory_dfs_replication",
+        "activedirectory_dfsn",
+        "activedirectory_dns",
+        "activedirectory_security",
+        "activedirectory_services",
+        "activemq",
+        "activemq_Application",
+        "activemq_broker",
+        "activemq_jvm_memory_usage",
+        "activemq_os",
+        "activemq_topic",
+        "apache",
+        "apache_Application",
+        "UCPSERVER",
+        "backend",
+        "bgpd",
+        "cassandra",
+        "cassandra_Application",
+        "clickhouse",
+        "clickhouse_Application",
+        "executescript",
+        "Endpoint",
+        "gateway",
+        "gateway_Application",
+        "gwd",
+        "horizontomcat",
+        "horizontomcat_Application",
+        "horizontomcat_server_threadpool",
+        "httpresponse",
+        "hyperv",
+        "hyperv_Application",
+        "ms_iis_aspnet",
+        "ms_iis_http_queues",
+        "ms_iis_websvc",
+        "ms_iis_websvc_cache",
+        "java",
+        "java_Application",
+        "jboss_datasource_pool",
+        "jboss_jvm_garbage_collector",
+        "jboss_jvm_memory",
+        "jboss_jvm_memory_pool",
+        "jboss",
+        "jboss_Application",
+        "websphere_jdbc",
+        "linux",
+        "mgd",
+        "msiis",
+        "msiis_Application",
+        "mssql",
+        "mssql_Application",
+        "mssql_database",
+        "mongodb",
+        "mongodb_Application",
+        "mongodb_databases",
+        "msexchange",
+        "msexchange_Application",
+        "msexchange_database",
+        "msexchange_database_instance",
+        "msexchange_domain_controller",
+        "msexchange_web_server",
+        "msexchange_win_service",
+        "ms_iis_dotnet",
+        "mysql",
+        "mysql_Application",
+        "mysql_database",
+        "natd",
+        "ntpd",
+        "ntpd_Application",
+        "nginx",
+        "nginx_Application",
+        "OpenSourceProcess",
+        "weblogic",
+        "weblogic_Application",
+        "oracledb",
+        "oracledb_Application",
+        "OS",
+        "ping",
+        "pivotalserver",
+        "pivotalserver_Application",
+        "pivotalserver_threadpool",
+        "pivotalserver_web_module",
+        "portal",
+        "postgresql",
+        "postgresql_Application",
+        "postgresql_database",
+        "processavailability",
+        "rabbitmq",
+        "rabbitmq_Application",
+        "rabbitmq_exchange",
+        "rabbitmq_queue",
+        "rabbitmq_virtual_host",
+        "redis",
+        "redis_Application",
+        "riak",
+        "riak_Application",
+        "sdwan",
+        "serviceavailability",
+        "websphere_servletSessionManager",
+        "sharepoint",
+        "sharepoint_Application",
+        "sharepoint_web_server",
+        "sharepoint_win_service",
+        "ssh",
+        "netresponse_tcp",
+        "websphere_threadpool",
+        "tomcat",
+        "tomcat_Application",
+        "tomcat_server_threadpool",
+        "horizontomcat_server_web_module",
+        "tomcat_server_web_module",
+        "netresponse_udp",
+        "upload",
+        "vc.procmon",
+        "vcsyscmd",
+        "vcg",
+        "vcg_Application",
+        "VelocloudGatewayProcess",
+        "vco",
+        "vco_Application",
+        "APPOSUCPAdapterInstance",
+        "watchquagga",
+        "weblogic_garbage_collector",
+        "weblogic_jms_runtime",
+        "weblogic_jta_runtime",
+        "weblogic_jvm_memory",
+        "weblogic_jvm_memory_pool",
+        "weblogic_jvm_runtime",
+        "websphere",
+        "websphere_Application",
+        "wildfly",
+        "wildfly_Application",
+        "win"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/APPOSUCP",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/APPOSUCP/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    },
+    {
+      "key": "LogInsightAdapter",
+      "name": "VMware Aria Operations for Logs Adapter",
+      "adapterKindType": "GENERAL",
+      "describeVersion": 17,
+      "identifiers": [],
+      "resourceKinds": [
+        "LoginSight Adapter Instance"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/LogInsightAdapter",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/LogInsightAdapter/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    },
+    {
+      "key": "VcfAdapter",
+      "name": "VMware Cloud Foundation",
+      "description": "VMware Cloud Foundation Adapter",
+      "adapterKindType": "GENERAL",
+      "describeVersion": 13,
+      "identifiers": [],
+      "resourceKinds": [
+        "PhysicalDatacenter",
+        "VcfAdapterInstance",
+        "VCFDomain",
+        "VCFWorld"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/VcfAdapter",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/VcfAdapter/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    },
+    {
+      "key": "VMWARE_INFRA_HEALTH",
+      "name": "VMware Infrastructure Health",
+      "description": "VMware Infrastructure Health",
+      "adapterKindType": "GENERAL",
+      "describeVersion": 6,
+      "identifiers": [],
+      "resourceKinds": [
+        "ARIA_AUTO_APP",
+        "CAS_HEALTH_WORLD",
+        "AUTOMATION_NODE_INSTANCE",
+        "CAS_HEALTH_SERVICES",
+        "VCENTER_BACKUP_JOB",
+        "CERTIFICATE",
+        "LicenseUsage",
+        "LICENSE_USAGE_WORLD",
+        "LicensedAsset",
+        "LicensedVC",
+        "ARIA_LIFECYCLE_APP",
+        "ARIA_LOGS_APP",
+        "ARIA_LOGS_HEALTH_WORLD",
+        "ARIA_NETWORKS_APP",
+        "ARIA_NETWORKS_COLLECTOR_NODE",
+        "ARIA_NETWORKS_WORLD",
+        "ARIA_NETWORKS_PLATFORM_NODE",
+        "ARIA_NETWORKS_SERVICE",
+        "NSX_BACKUP_JOB",
+        "NSX_T_APP",
+        "NSXT_HEALTH_WORLD",
+        "ARIA_OPS_APP",
+        "ARIA_OPS_WORLD",
+        "VRO_APP",
+        "VRO_HEALTH_WORLD",
+        "SDDC_MANAGER_APP",
+        "SDDC_MANAGER_BACKUP_JOB",
+        "SDDC_MANAGER_SERVICE",
+        "SRM_APP",
+        "SRM_HEALTH_WORLD",
+        "VC_APP",
+        "VCENTER_APPLIANCE_HEALTH_SERVICES",
+        "VCENTER_BACKUP_JOBS",
+        "VCENTER_HEALTH_WORLD",
+        "vCenterLicensing",
+        "vCenterLicense",
+        "VCENTER_NTP_SERVER",
+        "VCENTER_HEALTH_SERVICES",
+        "VCF_DEPLOYMENT",
+        "VCF_DOMAIN",
+        "VCF_HEALTH_WORLD",
+        "VIDM_APP",
+        "VIDM_HEALTH_WORLD",
+        "VMWARE_INFRA_HEALTH_WORLD",
+        "VMWARE_INFRA_HEALTH_INSTANCE",
+        "VSAN_APP",
+        "VSAN_HEALTH_WORLD",
+        "VSAN_HEALTH_SERVICES"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/VMWARE_INFRA_HEALTH",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/VMWARE_INFRA_HEALTH/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    },
+    {
+      "key": "vRealizeOpsMgrAPI",
+      "name": "VMwareAriaOperationsAPI",
+      "adapterKindType": "OPENAPI",
+      "describeVersion": 1,
+      "identifiers": [],
+      "resourceKinds": [
+        "vRealizeOpsMgrAPI Adapter Instance"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/vRealizeOpsMgrAPI",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/vRealizeOpsMgrAPI/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    },
+    {
+      "key": "vCenter Operations Adapter",
+      "name": "vRealize Operations Adapter",
+      "description": "vRealize Operations Manager Adapter",
+      "adapterKindType": "GENERAL",
+      "describeVersion": 344,
+      "identifiers": [],
+      "resourceKinds": [
+        "vCenter Operations Adapter Instance",
+        "vC-Ops-Admin-UI",
+        "vC-Ops-Analytics",
+        "vC-Ops-CaSA",
+        "Cloud-Proxy",
+        "vC-Ops-Cluster",
+        "vC-Ops-Collector",
+        "vC-Ops-Controller",
+        "vC-Ops-Fsdb",
+        "vC-Ops-ManagementPack",
+        "vC-Ops-ManagementPackGroup",
+        "vC-Ops-Node",
+        "vC-Ops-Persistence",
+        "vC-Ops-Product-UI",
+        "vC-Ops-Remote-Collector",
+        "vC-Ops-Suite-API",
+        "vC-Ops-Watchdog"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/vCenter%20Operations%20Adapter",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/vCenter%20Operations%20Adapter/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    },
+    {
+      "key": "VirtualAndPhysicalSANAdapter",
+      "name": "vSAN Adapter",
+      "description": "vSAN Adapter",
+      "adapterKindType": "GENERAL",
+      "describeVersion": 32,
+      "identifiers": [],
+      "resourceKinds": [
+        "CacheDisk",
+        "CapacityDisk",
+        "VirtualAndPhysicalSANAdapter Instance",
+        "VirtualSANDCCluster",
+        "VirtualSANDiskGroup",
+        "Vsan2Disk",
+        "VirtualSANFaultDomain",
+        "FileServer",
+        "FileShare",
+        "StoragePool",
+        "VirtualSANWitnessHost",
+        "vSAN World"
+      ],
+      "links": [
+        {
+          "href": "/suite-api/api/adapterkinds/VirtualAndPhysicalSANAdapter",
+          "rel": "SELF",
+          "name": "linkToSelf"
+        },
+        {
+          "href": "/suite-api/api/adapterkinds/VirtualAndPhysicalSANAdapter/resourcekinds",
+          "rel": "RELATED",
+          "name": "linkToAllResourceKinds"
+        }
+      ]
+    }
+  ]
+}
