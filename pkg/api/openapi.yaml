@@ -151,7 +151,7 @@ tags:
   - name: Resources
     description: >-
       <i>/api/resources</i> APIs for performing operations on numerous of
-      resources 
+      resources
     x-displayName: Resources
   - name: Solutions
     description: >-

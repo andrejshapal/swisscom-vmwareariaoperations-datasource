@@ -7,9 +7,7 @@
       "adapterKindType": "GENERAL",
       "describeVersion": 1,
       "identifiers": [],
-      "resourceKinds": [
-        "VCF_UNIFIED_CONFIG_INSTANCE"
-      ],
+      "resourceKinds": ["VCF_UNIFIED_CONFIG_INSTANCE"],
       "links": [
         {
           "href": "/suite-api/api/adapterkinds/VCF_UNIFIED_CONFIG",
@@ -203,9 +201,7 @@
       "adapterKindType": "GENERAL",
       "describeVersion": 7,
       "identifiers": [],
-      "resourceKinds": [
-        "DiagnosticsAdapterInstance"
-      ],
+      "resourceKinds": ["DiagnosticsAdapterInstance"],
       "links": [
         {
           "href": "/suite-api/api/adapterkinds/DiagnosticsAdapter",
@@ -414,9 +410,7 @@
       "adapterKindType": "GENERAL",
       "describeVersion": 17,
       "identifiers": [],
-      "resourceKinds": [
-        "LoginSight Adapter Instance"
-      ],
+      "resourceKinds": ["LoginSight Adapter Instance"],
       "links": [
         {
           "href": "/suite-api/api/adapterkinds/LogInsightAdapter",
@@ -437,12 +431,7 @@
       "adapterKindType": "GENERAL",
       "describeVersion": 13,
       "identifiers": [],
-      "resourceKinds": [
-        "PhysicalDatacenter",
-        "VcfAdapterInstance",
-        "VCFDomain",
-        "VCFWorld"
-      ],
+      "resourceKinds": ["PhysicalDatacenter", "VcfAdapterInstance", "VCFDomain", "VCFWorld"],
       "links": [
         {
           "href": "/suite-api/api/adapterkinds/VcfAdapter",
@@ -532,9 +521,7 @@
       "adapterKindType": "OPENAPI",
       "describeVersion": 1,
       "identifiers": [],
-      "resourceKinds": [
-        "vRealizeOpsMgrAPI Adapter Instance"
-      ],
+      "resourceKinds": ["vRealizeOpsMgrAPI Adapter Instance"],
       "links": [
         {
           "href": "/suite-api/api/adapterkinds/vRealizeOpsMgrAPI",

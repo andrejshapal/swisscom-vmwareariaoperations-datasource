@@ -5,7 +5,7 @@ resources-property-contents:
       type: array
       description: Collection of resource property contents
       items:
-        $ref: "#/components/schemas/resource-property-contents"
+        $ref: '#/components/schemas/resource-property-contents'
   title: resources-property-contents
   xml:
     name: resources-property-contents
@@ -18,7 +18,7 @@ resource-property-contents:
     - resourceId
   properties:
     properties:
-      $ref: "#/components/schemas/property-contents"
+      $ref: '#/components/schemas/property-contents'
     resourceId:
       type: string
       format: uuid
@@ -47,7 +47,7 @@ property-contents:
         wrapped: false
       description: Collection of property contents
       items:
-        $ref: "#/components/schemas/property-content"
+        $ref: '#/components/schemas/property-content'
   title: property-contents
   xml:
     name: property-contents

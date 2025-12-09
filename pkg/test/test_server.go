@@ -3,7 +3,7 @@ package main
 import (
 	_ "embed"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 )
 
@@ -43,7 +43,7 @@ func printReqData(r *http.Request) {
 	}
 
 	// Read and print the request body
-	bodyBytes, _ := ioutil.ReadAll(r.Body)
+	bodyBytes, _ := io.ReadAll(r.Body)
 	fmt.Println("Body:")
 	fmt.Println(string(bodyBytes))
 }

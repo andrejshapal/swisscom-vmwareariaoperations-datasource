@@ -1,37 +1,37 @@
 import { css } from '@emotion/css';
 
 export const styles = {
-    Common: {
-        check: css`
+  Common: {
+    check: css`
       margin-top: 5px;
     `,
-        wrapper: css`
+    wrapper: css`
       position: relative;
       width: 100%;
     `,
-        smallBtn: css`
+    smallBtn: css`
       margin-top: 5px;
       margin-inline: 5px;
     `,
-        selectWrapper: css`
+    selectWrapper: css`
       width: 100%;
     `,
-        inlineSelect: css`
+    inlineSelect: css`
       margin-right: 5px;
     `,
-        firstLabel: css`
+    firstLabel: css`
       margin-right: 5px;
     `,
-        expand: css`
+    expand: css`
       position: absolute;
       top: 2px;
       left: 6px;
       z-index: 100;
       color: gray;
     `,
-    },
-    ConfigEditor: {
-        container: css`
+  },
+  ConfigEditor: {
+    container: css`
       justify-content: space-between;
       h5 {
         line-height: 34px;
@@ -41,28 +41,28 @@ export const styles = {
         margin-right: 5px;
       }
     `,
-        wide: css`
+    wide: css`
       width: 75%;
     `,
-        subHeader: css`
+    subHeader: css`
       padding: 5px 0 5px 0;
     `,
-    },
-    QueryEditor: {
-        queryType: css`
+  },
+  QueryEditor: {
+    queryType: css`
       justify-content: space-between;
       span {
         display: flex;
       }
     `,
-        inlineField: css`
+    inlineField: css`
       margin-left: 7px;
-    `
-    },
-    FormatSelector: {
-        formatSelector: css`
+    `,
+  },
+  FormatSelector: {
+    formatSelector: css`
       display: flex;
     `,
-    },
-    VariablesEditor: {},
+  },
+  VariablesEditor: {},
 };

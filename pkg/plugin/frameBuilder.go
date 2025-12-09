@@ -87,7 +87,7 @@ func generatePropertiesForMetric(ts *[]time.Time, data *[]float64, properties *[
 		}
 	}
 
-	if labelToTimestampsMap == nil || len(labelToTimestampsMap) == 0 {
+	if len(labelToTimestampsMap) == 0 {
 		matchingLabels := make(map[string]string)
 		labelBytes, _ := json.Marshal(matchingLabels)
 		labelKey := string(labelBytes)

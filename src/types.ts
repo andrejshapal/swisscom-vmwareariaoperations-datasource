@@ -26,11 +26,11 @@ export interface AriaSecureJsonData {
   password?: string;
 }
 export interface KeyValue<T> {
-    [key: string]: T;
+  [key: string]: T;
 }
 
 export interface MetricPropertyTagResponse {
-    tags?: string[];       // Optional array of strings
-    metrics?: string[];    // Optional array of strings
-    properties?: string[]; // Optional array of strings
+  tags?: string[]; // Optional array of strings
+  metrics?: string[]; // Optional array of strings
+  properties?: string[]; // Optional array of strings
 }

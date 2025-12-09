@@ -11368,7 +11368,7 @@ paths:
                   <ops:status>Completed</ops:status>
               </ops:report>
           schema:
-              $ref: '#/definitions/report'
+            $ref: '#/definitions/report'
       security:
         - OpsToken: []
       deprecated: false
@@ -21432,7 +21432,7 @@ paths:
     put:
       tags:
         - Resources
-      summary: 'Inform one or more or all Adapters to start monitoring a Collection of Resources. Note: Start isn''t supported on per resource bases any more.'
+      summary: "Inform one or more or all Adapters to start monitoring a Collection of Resources. Note: Start isn't supported on per resource bases any more."
       description: |-
         The query parameter <i>id</i> is for specifying the set of Resources that should
         be monitored.
@@ -21473,7 +21473,7 @@ paths:
     put:
       tags:
         - Resources
-      summary: 'Inform one or more or all Adapters to stop monitoring a Collection of Resources. Note: Stop isn''t supported on per resource bases any more.'
+      summary: "Inform one or more or all Adapters to stop monitoring a Collection of Resources. Note: Stop isn't supported on per resource bases any more."
       description: |-
         The query parameter <i>id</i> is for specifying the set of Resources that should
         no longer be monitored.
@@ -23435,7 +23435,7 @@ paths:
     put:
       tags:
         - Resource
-      summary: 'Inform one or more or all Adapters to start monitoring this Resource. Note: Start isn''t supported on per resource bases any more.'
+      summary: "Inform one or more or all Adapters to start monitoring this Resource. Note: Start isn't supported on per resource bases any more."
       description: The optional query parameter <i>adapterId</i> determines which of the Adapters need to be informed to start monitoring the Resource. If this is not specified, then all of the Adapters will start monitoring the Resource.
       operationId: startMonitoringResourceUsingPUT
       produces:
@@ -23467,7 +23467,7 @@ paths:
     put:
       tags:
         - Resource
-      summary: 'Inform one or more or all Adapters to stop monitoring this Resource. Note: Stop isn''t supported on per resource bases any more.'
+      summary: "Inform one or more or all Adapters to stop monitoring this Resource. Note: Stop isn't supported on per resource bases any more."
       description: The optional query parameter <i>adapterId</i> determines which of the Adapters need to be informed to stop monitoring the Resource. If this is not specified, then all of the Adapters will stop monitoring the Resource.
       operationId: stopMonitoringResourceUsingPUT
       produces:
@@ -32365,7 +32365,7 @@ definitions:
           - STATKEY
           - PROPERTY
     title: condition
-    description: 'Base class for Property Conditions. For JSON the class descendants will generate with a field named ''type'' with one of the following values: CONDITION_PROPERTY_STRING, CONDITION_PROPERTY_NUMERIC'
+    description: "Base class for Property Conditions. For JSON the class descendants will generate with a field named 'type' with one of the following values: CONDITION_PROPERTY_STRING, CONDITION_PROPERTY_NUMERIC"
   content:
     type: object
     required:

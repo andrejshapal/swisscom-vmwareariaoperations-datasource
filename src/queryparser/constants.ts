@@ -32,59 +32,41 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 export const LANG_ID = 'aria-operations';
 
-export const FUNCTIONS = [
-    'adapterKind',
-    'resourceKind',
-]
+export const FUNCTIONS = ['adapterKind', 'resourceKind'];
 
-export const FILTERS = [
-    'whereHealth',
-    'whereState',
-    'whereStatus',
-    'whereTag',
-]
+export const FILTERS = ['whereHealth', 'whereState', 'whereStatus', 'whereTag'];
 
-export const COLLECTORS = [
-    'withMetric',
-    'withProperty'
-]
+export const COLLECTORS = ['withMetric', 'withProperty'];
 
-export const CUSTOM_FILTERS = [
-    'where',
-]
+export const CUSTOM_FILTERS = ['where'];
 
-export const KEYWORDS = [
-    ...FUNCTIONS,
-    ...FILTERS,
-    ...COLLECTORS,
-    ...CUSTOM_FILTERS,
-]
+export const KEYWORDS = [...FUNCTIONS, ...FILTERS, ...COLLECTORS, ...CUSTOM_FILTERS];
 
 export const STATES = [
-    'STOPPED',
-    'STARTING',
-    'STARTED',
-    'STOPPING',
-    'UPDATING',
-    'FAILED',
-    'MAINTAINED',
-    'MAINTAINED_MANUAL',
-    'REMOVING',
-    'NOT_EXISTING',
-    'NONE',
-    'UNKNOWN',
+  'STOPPED',
+  'STARTING',
+  'STARTED',
+  'STOPPING',
+  'UPDATING',
+  'FAILED',
+  'MAINTAINED',
+  'MAINTAINED_MANUAL',
+  'REMOVING',
+  'NOT_EXISTING',
+  'NONE',
+  'UNKNOWN',
 ];
 
 export const STATUSES = [
-    'NONE',
-    'ERROR',
-    'UNKNOWN',
-    'DOWN',
-    'DATA_RECEIVING',
-    'OLD_DATA_RECEIVING',
-    'NO_DATA_RECEIVING',
-    'NO_PARENT_MONITORING',
-    'COLLECTOR_DOWN',
+  'NONE',
+  'ERROR',
+  'UNKNOWN',
+  'DOWN',
+  'DATA_RECEIVING',
+  'OLD_DATA_RECEIVING',
+  'NO_DATA_RECEIVING',
+  'NO_PARENT_MONITORING',
+  'COLLECTOR_DOWN',
 ];
 
 export const HEALTH = ['GREEN', 'YELLOW', 'ORANGE', 'RED', 'GREY'];

@@ -6,7 +6,7 @@ info:
 
     <p><span style="color: #9F6000; background-color: #FEEFB3; padding:7px;">&#9888; <b>Notice</b>: XML media type is deprecated. All new APIs or changes won't support XML. Please switch to JSON for data interchange.</span></p>
   title: VMware Aria Operations API
-  version: ""
+  version: ''
 tags:
   - name: Internal Resources
     description: <i>/internal/resources</i> APIs for performing internal operations
@@ -18,8 +18,8 @@ paths:
         - Internal Resources
       summary: Get the value changes of requested properties for the specified
         resources in a given time interval
-      description: "Note: The request in addition to property value changes will
-        return the value of the property at the beginning of the range."
+      description: 'Note: The request in addition to property value changes will
+        return the value of the property at the beginning of the range.'
       operationId: queryPropertyChangesOfResourcesUsingPOST
       parameters:
         - name: X-Ops-API-use-unsupported
@@ -38,10 +38,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/internal-property-change-query"
+              $ref: '#/components/schemas/internal-property-change-query'
           application/xml:
             schema:
-              $ref: "#/components/schemas/internal-property-change-query"
+              $ref: '#/components/schemas/internal-property-change-query'
         description: The query spec
         required: true
         x-examples:
@@ -62,13 +62,13 @@ paths:
               "end" : 1535140800000
             }
       responses:
-        "200":
+        '200':
           description: A mapping from requested resource to specified properties' value
             changes
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/internal-resources-property-contents"
+                $ref: '#/components/schemas/internal-resources-property-contents'
               examples:
                 response:
                   value: |-
@@ -103,7 +103,7 @@ paths:
                     }
             application/xml:
               schema:
-                $ref: "#/components/schemas/internal-resources-property-contents"
+                $ref: '#/components/schemas/internal-resources-property-contents'
               examples:
                 response:
                   value: >
@@ -151,7 +151,7 @@ components:
       type: apiKey
       name: Authorization
       in: header
-      x-deployedOnCloudProxy: "false"
+      x-deployedOnCloudProxy: 'false'
       x-supportedTokens:
         - vRealizeOpsToken
         - OpsToken
@@ -167,7 +167,7 @@ components:
           type: array
           description: Collection of resource property contents
           items:
-            $ref: "#/components/schemas/internal-resource-property-contents"
+            $ref: '#/components/schemas/internal-resource-property-contents'
       title: resources-property-contents
       xml:
         name: resources-property-contents
@@ -180,7 +180,7 @@ components:
         - resourceId
       properties:
         property-contents:
-          $ref: "#/components/schemas/internal-property-contents"
+          $ref: '#/components/schemas/internal-property-contents'
         resourceId:
           type: string
           format: uuid
@@ -209,7 +209,7 @@ components:
             wrapped: false
           description: Collection of property contents
           items:
-            $ref: "#/components/schemas/internal-property-content"
+            $ref: '#/components/schemas/internal-property-content'
       title: property-contents
       xml:
         name: property-contents

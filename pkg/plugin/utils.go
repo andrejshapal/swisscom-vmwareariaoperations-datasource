@@ -13,7 +13,7 @@ func testString(operand string, value string, pattern string) bool {
 	case "=":
 		return value == pattern
 	case "!=":
-		return !(value == pattern)
+		return value != pattern
 	case "=~":
 		{
 			r, _ := regexp.Compile(pattern)

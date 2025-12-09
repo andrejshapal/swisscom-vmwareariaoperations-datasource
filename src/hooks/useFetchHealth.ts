@@ -1,6 +1,6 @@
-import {HEALTH} from "../queryparser/constants";
-import {DataSource} from "../datasource";
+import { HEALTH } from '../queryparser/constants';
+import { DataSource } from '../datasource';
 
 export default (datasource: DataSource): readonly string[] => {
-    return HEALTH;
+  return HEALTH;
 };

@@ -6,21 +6,13 @@
         "property-content": [
           {
             "statKey": "summary|tagJson",
-            "timestamps": [
-              1764688530528
-            ],
-            "values": [
-              "none"
-            ]
+            "timestamps": [1764688530528],
+            "values": ["none"]
           },
           {
             "statKey": "summary|parentVcenter",
-            "timestamps": [
-              1764688530528
-            ],
-            "values": [
-              "lsrvat01vce0101.sccloudinfra.net"
-            ]
+            "timestamps": [1764688530528],
+            "values": ["lsrvat01vce0101.sccloudinfra.net"]
           }
         ]
       }
@@ -31,30 +23,18 @@
         "property-content": [
           {
             "statKey": "summary|tagJson",
-            "timestamps": [
-              1764688530528
-            ],
-            "values": [
-              "none"
-            ]
+            "timestamps": [1764688530528],
+            "values": ["none"]
           },
           {
             "statKey": "summary|parentHost",
-            "timestamps": [
-              1764688530528
-            ],
-            "values": [
-              "lesx01olt0011.sccloudinfra.net"
-            ]
+            "timestamps": [1764688530528],
+            "values": ["lesx01olt0011.sccloudinfra.net"]
           },
           {
             "statKey": "summary|parentVcenter",
-            "timestamps": [
-              1764688530528
-            ],
-            "values": [
-              "lsrvat01vce0101.sccloudinfra.net"
-            ]
+            "timestamps": [1764688530528],
+            "values": ["lsrvat01vce0101.sccloudinfra.net"]
           }
         ]
       }
@@ -65,10 +45,7 @@
         "property-content": [
           {
             "statKey": "summary|tagJson",
-            "timestamps": [
-              1761061781000,
-              1764688530428
-            ],
+            "timestamps": [1761061781000, 1764688530428],
             "values": [
               "[{\"category\":\"AlarmingLevel\",\"name\":\"besteffort\"},{\"category\":\"Responsibility\",\"name\":\"Squad-INFRA\"}]",
               "[{\"category\":\"AlarmingLevel\",\"name\":\"besteffort\"},{\"category\":\"Responsibility\",\"name\":\"Squad-PITSTOP\"}]"
@@ -76,21 +53,13 @@
           },
           {
             "statKey": "summary|parentHost",
-            "timestamps": [
-              1764688530528
-            ],
-            "values": [
-              "lesx01olt0011.sccloudinfra.net"
-            ]
+            "timestamps": [1764688530528],
+            "values": ["lesx01olt0011.sccloudinfra.net"]
           },
           {
             "statKey": "summary|parentVcenter",
-            "timestamps": [
-              1764688530528
-            ],
-            "values": [
-              "lsrvat01vce0101.sccloudinfra.net"
-            ]
+            "timestamps": [1764688530528],
+            "values": ["lsrvat01vce0101.sccloudinfra.net"]
           }
         ]
       }
