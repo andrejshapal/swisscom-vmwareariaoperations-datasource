@@ -212,11 +212,12 @@ func tableFrame(metrics *[]api.StatsOfResource, resourceIds map[types.UUID]*api.
 					var tags []Tags
 					frame := data.NewFrame("",
 						data.NewField("time", nil, bucket.Timestamp),
-						data.NewField("__name__", nil, bucket.Data),
+						data.NewField("__name__", nil, metric),
 						data.NewField("adapterKind", nil, adapterKind),
 						data.NewField("resourceKind", nil, resourceKind),
 						data.NewField("resourceId", nil, resourceId),
 						data.NewField("resourceName", nil, resourceName),
+						data.NewField("Value", nil, bucket.Data),
 					)
 					for k, v := range propertyLabels {
 						if k != tagProperty {
