@@ -105,6 +105,7 @@ func (d *Datasource) fetchAdapterKinds(rw http.ResponseWriter, req *http.Request
 	resp, err := d.ariaClient.GetAdapterTypesUsingGETWithResponse(req.Context(), &api.GetAdapterTypesUsingGETParams{})
 	if err != nil {
 		backend.Logger.Error("Unable to get adapter types", "error", err)
+		d.ariaClient = nil
 		return
 	}
 	adapterKinds := make(map[string]*[]string)
@@ -141,6 +142,7 @@ func (d *Datasource) fetchMetricsProperties(rw http.ResponseWriter, req *http.Re
 	response, err := d.ariaClient.GetResourceTypeAttributesForAdapterTypeUsingGETWithResponse(req.Context(), adapterKind, resourceKind, &api.GetResourceTypeAttributesForAdapterTypeUsingGETParams{StatOnly: &statsOnly})
 	if err != nil {
 		backend.Logger.Error("Unable to get metrics and properties", "adapterKind", &adapterKind, "resourceKind", &resourceKind, "error", err)
+		d.ariaClient = nil
 		rw.WriteHeader(http.StatusBadRequest)
 		return
 	}
