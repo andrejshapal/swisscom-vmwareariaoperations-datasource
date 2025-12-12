@@ -49,7 +49,8 @@ func printReqData(r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/api/auth/token/acquire", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc(""+
+		"", func(w http.ResponseWriter, r *http.Request) {
 		printReqData(r)
 		w.Header().Set("Content-Type", "application/json")
 		_, err := w.Write(acquireToken)

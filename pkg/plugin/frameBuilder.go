@@ -197,13 +197,11 @@ func tableFrame(metrics *[]api.StatsOfResource, resourceIds map[types.UUID]*api.
 					if err != nil {
 						continue
 					}
-					metric := make([]string, len(bucket.Data))
 					adapterKind := make([]string, len(bucket.Data))
 					resourceKind := make([]string, len(bucket.Data))
 					resourceId := make([]string, len(bucket.Data))
 					resourceName := make([]string, len(bucket.Data))
 					for i := range bucket.Data {
-						metric[i] = stat.StatKey.Key
 						adapterKind[i] = meta.AdapterKindKey
 						resourceKind[i] = meta.ResourceKindKey
 						resourceId[i] = stats.ResourceId.String()
@@ -212,12 +210,11 @@ func tableFrame(metrics *[]api.StatsOfResource, resourceIds map[types.UUID]*api.
 					var tags []Tags
 					frame := data.NewFrame("",
 						data.NewField("time", nil, bucket.Timestamp),
-						data.NewField("__name__", nil, metric),
 						data.NewField("adapterKind", nil, adapterKind),
 						data.NewField("resourceKind", nil, resourceKind),
 						data.NewField("resourceId", nil, resourceId),
 						data.NewField("resourceName", nil, resourceName),
-						data.NewField("Value", nil, bucket.Data),
+						data.NewField(stat.StatKey.Key, nil, bucket.Data),
 					)
 					for k, v := range propertyLabels {
 						if k != tagProperty {
