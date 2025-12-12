@@ -1,7 +1,7 @@
 import { styles } from 'styles';
 import { EditorTypeSwitcher } from '../components/EditorTypeSwitcher';
 import { Button } from '@grafana/ui';
-import { AriaQuery, defaultBuilderQuery, EditorType, vROPsQueryEditorProps } from '../types/queryBuilder';
+import { AriaQuery, EditorType, vROPsQueryEditorProps } from '../types/queryBuilder';
 import React, { useEffect, useRef } from 'react';
 import { pluginVersion } from '@grafana/schema/dist/esm/raw/composable/logs/panelcfg/x/LogsPanelCfg_types.gen';
 import { generateQuery, migrateQuery } from '../data/queryGenerator';
@@ -40,7 +40,7 @@ const EditorByType = (props: vROPsQueryEditorProps) => {
   const queryKey = query.key || '';
   const lastKey = useRef<string>(queryKey);
   if (queryKey !== lastKey.current && query.editorType === EditorType.Builder) {
-    builderOptionsDispatch(setAllOptions(defaultBuilderQuery.builderOptions || {}));
+    builderOptionsDispatch(setAllOptions(query.builderOptions || {}));
     lastKey.current = queryKey;
   }
 
@@ -49,7 +49,7 @@ const EditorByType = (props: vROPsQueryEditorProps) => {
    */
   const lastEditorType = useRef<EditorType>();
   if (query.editorType !== lastEditorType.current && query.editorType === EditorType.Builder) {
-    builderOptionsDispatch(setAllOptions(defaultBuilderQuery.builderOptions || {}));
+    builderOptionsDispatch(setAllOptions(query.builderOptions || {}));
   }
   lastEditorType.current = query.editorType;
 
